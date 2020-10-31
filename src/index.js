@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       body: JSON.stringify({
         name: toyName,
         image: toyImage,
-        likes: 99
+        likes: 0
       })
     })
     .then( r => r.json())
