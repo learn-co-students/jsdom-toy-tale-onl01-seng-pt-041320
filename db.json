@@ -47,6 +47,58 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Titak",
+      "image": "http://whatever.com",
+      "id": 9
+    },
+    {
+      "name": "Vedran",
+      "image": "vedran@dot.com",
+      "id": 10
+    },
+    {
+      "name": "Titak",
+      "image": "http://whatever.com",
+      "likes": 0,
+      "id": 11
+    },
+    {
+      "name": "John",
+      "image": "url",
+      "likes": 0,
+      "id": 12
+    },
+    {
+      "name": "Jessie",
+      "image": "https://vignette.wikia.nocookie.net/p__/images/8/88/Jessie_Toy_Story_3.png/revision/latest?cb=20161023024601&path-prefix=protagonist",
+      "likes": 0,
+      "id": 13
+    },
+    {
+      "name": "Elmo",
+      "image": "https://cdn.sesamestreet.org/sites/default/files/media_folders/Images/MuppetsHalloween_Elmo.png",
+      "likes": 0,
+      "id": 14
+    },
+    {
+      "name": "Elmo",
+      "image": "https://cdn.sesamestreet.org/sites/default/files/media_folders/Images/MuppetsHalloween_Elmo.png",
+      "likes": 0,
+      "id": 15
+    },
+    {
+      "name": "Lighting McQueen",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41bXR8ybbHL._AC_.jpg",
+      "likes": 0,
+      "id": 16
+    },
+    {
+      "name": "Dragan Slijepcevic",
+      "image": "dafdasfda",
+      "likes": 0,
+      "id": 17
     }
   ]
 }
