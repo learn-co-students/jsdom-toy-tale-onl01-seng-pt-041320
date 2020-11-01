@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   });
   fetchToys(); 
-  listenerForToyLike(); 
 });
 
 //FETCHING AND DISPLAYING TOYS
@@ -49,8 +48,14 @@ function generateCards(cardInfo) {
   //generate toy cards HTML
     card.innerHTML = `<h2>${cardInfo.name}</h2>
     <img src=${cardInfo.image} class="toy-avatar" />
-    <p>${cardInfo.likes} </p>
-    <button class="like-btn">Like <3</button>`
+    <p data-number="${cardInfo.id}">${cardInfo.likes} </p>
+    <button class="like-btn" data-id="${cardInfo.id}">Like <3</button>`
+    const likeButton = document.querySelector(`[data-id="${cardInfo.id}"]`)
+    console.log(likeButton)
+    likeButton.addEventListener('click', (e) => {
+      console.log(e.target.dataset);
+      likes(e)
+    })
 
   return card
 }
@@ -87,19 +92,23 @@ function submitData(toyName, imgURL) {
 
 //LIKING A TOY
 
-function listenerForToyLike() {
-  const toyLikeBtn = document.getElementsByClassName("like-btn")
-  for(let i=0; i<toyLikeBtn.length; i++){
-    toyLikeBtn[i].addEventListener('click', () => {
-      console.log(`Toy's LIKE button number: ${i+1} is clicked`);
-    });
-  }
-}
+function likes(e) {
+  e.preventDefault()
+  let more = parseInt(e.target.previousElementSibling.innerText) + 1
 
-function toyLikeDOM() {
+  fetch(`http://localhost:3000/toys/${e.target.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
 
-}
-
-function toyLikePlusPlus (toyLikes) {   //increases numbers of likes
-  return toyLikes++;
+      },
+      body: JSON.stringify({
+        "likes": more
+      })
+    })
+    .then(res => res.json())
+    .then((like_obj => {
+      e.target.previousElementSibling.innerText = `${more} likes`;
+    }))
 }
