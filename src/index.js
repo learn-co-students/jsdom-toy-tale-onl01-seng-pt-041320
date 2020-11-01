@@ -97,8 +97,7 @@ function listenerForToyLike() {
 }
 
 function toyLikeDOM() {
-  const toyLikeBtn = document.getElementsByClassName("like-btn")
-  console.log(toyLikeBtn[0])
+
 }
 
 function toyLikePlusPlus (toyLikes) {   //increases numbers of likes
