@@ -4,19 +4,20 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 5
+      "likes": 10,
+      "like": 8
     },
     {
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 11
+      "likes": 17
     },
     {
       "id": 3,
       "name": "Mr. Potato Head",
       "image": "https://vignette.wikia.nocookie.net/universe-of-smash-bros-lawl/images/d/d8/Mr-potato-head-toy-story.gif/revision/latest?cb=20151129131217",
-      "likes": 3
+      "likes": 8
     },
     {
       "id": 4,
@@ -328,6 +329,24 @@
       "image": "https://dks.scene7.com/is/image/GolfGalaxy/16SPLUCRSSCRTFFCLBKB?qlt=70&wid=1100&fmt=webp",
       "likes": 3,
       "id": 57
+    },
+    {
+      "name": "Pikachu",
+      "image": "https://static.wikia.nocookie.net/pokemon/images/4/49/Ash_Pikachu.png/revision/latest?cb=20200405125039",
+      "likes": 0,
+      "id": 58
+    },
+    {
+      "name": "Pikachu",
+      "image": "https://static.wikia.nocookie.net/pokemon/images/4/49/Ash_Pikachu.png/revision/latest?cb=20200405125039",
+      "likes": 0,
+      "id": 59
+    },
+    {
+      "name": "basketball",
+      "image": "https://dks.scene7.com/is/image/GolfGalaxy/16SPLUCRSSCRTFFCLBKB?qlt=70&wid=1100&fmt=webp",
+      "likes": 0,
+      "id": 60
     }
   ]
 }
