@@ -3,18 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <title>Toy Tale</title>
+
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    
     <div id="toy-header">
-      <img
-        src="https://fontmeme.com/permalink/180719/67429e6afec53d21d64643101c43f029.png"
-        alt="toy-header"
-      />
+      <img src="https://fontmeme.com/permalink/180719/67429e6afec53d21d64643101c43f029.png" alt="toy-header"/>
     </div>
 
     <div class="container">
-      <form class="add-toy-form">
+      <form class="add-toy-form" style=""></form>
         <h3>Create a toy!</h3>
 
         <input
@@ -45,7 +44,15 @@
       Andy needs your help! <button id="new-toy-btn">Add a new toy!</button>
     </p>
 
-    <div id="toy-collection"></div>
+    <div id="toy-collection">
+      <div class="card"> 
+        <h2>name</h2> 
+        <img src= toy_image_url class= "toy-avatar" />
+        <p>num likes </p> 
+        <button class='like-btn'> Like <3</button>
+      </div>
+    </div>
+    
     <script type="text/javascript" src="src/index.js"></script>
   </body>
 </html>
