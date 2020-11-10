@@ -33,7 +33,32 @@ function renderToy(toy) {
     newDiv.appendChild(button)
   
     collection.appendChild(newDiv)
-  
+
+    button.addEventListener("click", function(event) {
+      let likeText = button.previousSibling.innerHTML;
+      let likeNumber = likeText.match(/[0-9]+/g);
+      button.previousSibling.innerHTML = `${parseInt(likeNumber) + 1} Likes`;
+    
+      let configObj = {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify({
+              "likes": parseInt(likeNumber) + 1
+            })
+          }
+      
+        fetch(`http://localhost:3000/toys/${toy.id}`, configObj)
+          .then(function(response) {
+              return response.json();
+          })
+          .then(function(object) {
+
+          });
+     
+        });
 }
 
   
@@ -51,10 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       toyFormContainer.style.display = "none";
     }      
-      let form = document.querySelector("#add-toy-form")
+      let form = document.querySelector(".add-toy-form")
       form.addEventListener('submit', function(event) {
-        let nameInput = document.querySelector('text#name').value
-        let imageInput = document.querySelector('text#image').value
+        let nameInput = document.querySelector('input[name="name"]').value
+        let imageInput = document.querySelector('input[name="image"]').value
         let formData = {
           "name": nameInput,
           "image": imageInput,
@@ -83,6 +108,29 @@ document.addEventListener("DOMContentLoaded", () => {
     
 });
 
+let buttons = document.querySelectorAll(".like-btn")
 
-
-// add new toy: put existing toys into an array, push new toy to array from form, clear innerHTML on page, rerender all toys in array. like in pod exercise.
+for (let button of buttons) {
+  button.addEventListener("click", function(event) {
+      let likeText = button.previousSibling.innerHTML;
+      let likeNumber = likeText.match(/[0-9]+/g);
+      button.previousSibling.innerHTML = `${parseInt(likeNumber) + 1} Likes`;
+    
+      let configObj = {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            "likes": parseInt(likeNumber) + 1
+          }
+      
+        fetch("http://localhost:3000/toys/:id", configObj)
+          .then(function(response) {
+              return response.json();
+          })
+          .then(function(object) {
+          });
+     
+        });
+        }
